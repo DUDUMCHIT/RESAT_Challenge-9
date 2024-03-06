@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<style>
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>To-Do List</h1>
+  <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+  <select id="priority">
+    <option value="낮음">낮음</option>
+    <option value="보통">보통</option>
+    <option value="높음">높음</option>
+    <option value="아주 높음">아주 높음</option>
+  </select>
+  <button onclick="addTodo()">할 일 추가하기</button>
+
+  <div>
+    <input type="radio" name="filter" id="all" value="all" checked onchange="renderTodos()">
+    <label for="all">전체 리스트</label>
+    <input type="radio" name="filter" id="completed" value="completed" onchange="renderTodos()">
+    <label for="completed">완료된 리스트</label>
+    <input type="radio" name="filter" id="uncompleted" value="uncompleted" onchange="renderTodos()">
+    <label for="uncompleted">미완료 리스트</label>
+  </div>
+
+  <ul id="todoList"></ul>
+</div>
+
+<script>
+let todos = [];
+
+function addTodo() {
+  const todoInput = document.getElementById('todoInput');
+  const priority = document.getElementById('priority').value;
+  const todo = {
+    text: todoInput.value,
+    priority: priority,
+    completed: false
+  };
+  todos.push(todo);
+  renderTodos();
+  todoInput.value = '';
+}
+
+function renderTodos() {
+  const todoList = document.getElementById('todoList');
+  const filter = document.querySelector('input[name="filter"]:checked').value;
+  todoList.innerHTML = '';
+  todos.forEach((todo, index) => {
+    if (filter === 'completed' && !todo.completed) {
+      return;
+    } else if (filter === 'uncompleted' && todo.completed) {
+      return;
+    }
+    const listItem = document.createElement('li');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = todo.completed;
+    checkbox.addEventListener('change', () => {
+      toggleTodoCompleted(index);
+    });
+    const todoText = document.createElement('span');
+    todoText.textContent = todo.text + ' (' + todo.priority + ')';
+    if (todo.completed) {
+      todoText.classList.add('completed');
+    }
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = '삭제';
+    deleteButton.addEventListener('click', () => {
+      deleteTodo(index);
+    });
+    listItem.appendChild(checkbox);
+    listItem.appendChild(todoText);
+    listItem.appendChild(deleteButton);
+    todoList.appendChild(listItem);
+  });
+}
+
+function toggleTodoCompleted(index) {
+  todos[index].completed = !todos[index].completed;
+  renderTodos();
+}
+
+function deleteTodo(index) {
+  todos.splice(index, 1);
+  renderTodos();
+}
+
+renderTodos();
+</script>
+
+</body>
+</html>
