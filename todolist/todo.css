@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'EF_watermelonSalad';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_watermelonSalad.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.back{
+    background-color: beige; /*배경색 정의 */
+    border : 2px rgb(202, 202, 148) 
+    /*border 속성은 border-style, 
+    border-width, border-color 속성을 한번에 
+    정의하는 단축 속성.
+    순서는 상관 없음 */
+}
+
+body {
+    width : 500px;
+    height : 500px;
+    position: absolute;
+    top: 10%;
+    left: 35%;   
+    /*width랑 height은 또 태그, 아이디 말고
+    요소에만 적용이 되나? .back에 쓰니까 안되네*/
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3%;
+}
+
+
+.priority-container {
+    margin-top: 10px; /* 할일 입력 필드와 중요도 선택 사이의 간격 조정 */
+    font-family: 'Cafe24Ssurround';
+    font-size: 17px;
+    
+}
+
+#addBtn {
+    margin-top: 10px; /* 중요도 선택과 추가 버튼 사이의 간격 조정 */
+    
+    font-family: 'Cafe24Ssurround';
+    font-size: 17px;
+}
+
+#todoInput{
+    font-family:'EF_watermelonSalad';
+    font-size: 13px;
+    width : 300px;
+    height : 30px;
+    
+}
+
+#todoList{
+    font-family:'EF_watermelonSalad';
+    font-size: 18px;
+}

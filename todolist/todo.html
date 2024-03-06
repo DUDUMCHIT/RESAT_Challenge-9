@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Todo list</title>
+    <link href="./todo.css" rel="stylesheet"/> 
+    <script src="./todo.js" defer></script>
+</head>
+
+<body>
+    <div class="back">
+        <h1>TO DO LIST</h1>
+        <div>
+            <input type="text" id="todoInput" placeholder="오늘의 할일">
+        </div>
+        <div class="priority-container">
+            <label for="priority">중요도:</label>
+
+            <input type="radio" id="lowPriority" name="priority" value="Low">
+            <label for="lowPriority">낮음</label>
+
+            <input type="radio" id="mediumPriority" name="priority" value="Medium">
+            <label for="mediumPriority">중간</label>
+
+            <input type="radio" id="highPriority" name="priority" value="High">
+            <label for="highPriority">높음</label>
+
+            <input type="radio" id="veryHighPriority" name="priority" value="VeryHigh">
+            <label for="veryHighPriority">아주 높음</label>
+
+        </div>
+        <button type="button" id="addBtn">추가</button>
+        <ul id="todoList"></ul>
+    </div>
+</body>
+</html>
