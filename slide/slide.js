@@ -15,7 +15,7 @@ window.onload = function() {
    /* 주요 변수 초기화 */  
    let currentIdx = 0;
    let translate = 0;
-   const speedTime = 500; //클릭할때 바뀌는 속도
+   const speedTime = 400; //클릭할때 바뀌는 속도
 
    /* CSSOM 셋업 */
    const sliderCloneLis = slider.querySelectorAll('li');
