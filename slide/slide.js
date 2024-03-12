@@ -1,3 +1,5 @@
+//코드리뷰다시
+
 window.onload = function() {
    const kindWrap =  document.querySelector('.kind_wrap');
    const slider = kindWrap.querySelector('.slider');
@@ -13,7 +15,7 @@ window.onload = function() {
    /* 주요 변수 초기화 */  
    let currentIdx = 0;
    let translate = 0;
-   const speedTime = 600;
+   const speedTime = 1000; // 바뀌는 속도가 너무 빨라 다시 변경 
 
    /* CSSOM 셋업 */
    const sliderCloneLis = slider.querySelectorAll('li');

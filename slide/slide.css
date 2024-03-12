@@ -1,22 +1,44 @@
+
+
 * {
   margin:0; 
   padding:0;
 }
+
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 li {
   list-style: none;
 }
+#font{
+  font-family:'SUITE-Regular';
+  font-weight:400;
+  font-size:40px;
+  margin-bottom:5px;
+}
+
+
 .kind_wrap {  
-  width:100%;
-  max-width:500px;  
+  width: 500px; 
+  height: 600px;
+  background-color: none; 
   margin:0 auto; 
-  position: relative;
+  position: absolute;
+  top:10%;
+  left:35%;
+  text-align: center;
 }
 .kind_wrap > .kind_slider {
   overflow: hidden;
 }
 .kind_wrap > .kind_slider .slider { 
-  position: flex; 
-  transition: 0.7s; 
+  position: relative; 
+  transition: 1s; 
 } 
 .kind_wrap > .kind_slider .slider li {
   float:left;
@@ -24,19 +46,30 @@ li {
 }
 .kind_wrap > .kind_slider li img {
   vertical-align: top;
-  width:100%;
-  height: auto;
-  object-fit: cover;
+  width: 500px;
+  height: 500px;
 }
   
   
 .kind_wrap .arrow > a.prev {
   position: absolute; 
-  left:-50px; 
-  top:100px;
+  left:20px; 
+  top:250px;
+  font-size:100px;
+  color: white;
+  background-color:transparent; /*none하면 회색 나옴 헷갈리게하네...*/
+  border:transparent;
+  text-decoration-line: none; /*하이퍼링크 밑줄없애기*/
 }
 .kind_wrap .arrow > a.next {
   position: absolute; 
-  right:-50px; 
-  top:100px;
+  right:20px; 
+  top:250px;
+  font-size:100px;
+  color: white;
+  background-color:transparent; /*none하면 회색 나옴 헷갈리게하네...*/
+  border:transparent;
+  text-decoration-line: none; /*하이퍼링크 밑줄없애기*/
+  /*클릭후 색상 바꿔보기. a: hover/ a: active 써도 안됨 링크가 
+  없어서 그런가? */
 }
