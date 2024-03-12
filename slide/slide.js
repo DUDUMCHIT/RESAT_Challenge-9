@@ -1,5 +1,5 @@
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('#prev');
+const nextButton = document.querySelector('#next');
 const carousel = document.querySelector('.carousel');
 
 let index = 0;
