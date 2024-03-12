@@ -15,7 +15,7 @@ window.onload = function() {
    /* 주요 변수 초기화 */  
    let currentIdx = 0;
    let translate = 0;
-   const speedTime = 1000; // 바뀌는 속도가 너무 빨라 다시 변경 
+   const speedTime = 500; //클릭할때 바뀌는 속도
 
    /* CSSOM 셋업 */
    const sliderCloneLis = slider.querySelectorAll('li');
@@ -74,7 +74,7 @@ window.onload = function() {
     }
   
     function showSliding() {
-      setInterval(sliding, 1500);
+      setInterval(sliding, 3000); //자동 속도
     }
   
     showSliding();
