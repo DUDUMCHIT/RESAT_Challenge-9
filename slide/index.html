@@ -2,23 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="./slide.css" />
     <title>Carousel</title>
   </head>
   <body>
-    <div class="carousel-wrapper">
-      <div class="carousel">
-        <img src ="mirror1.jpg"/>
-        <img src ="mirror2.jpg"/>
-        <img src ="mirror3.jpg"/>
-       
+    <div class="kind_wrap">
+      <div class="kind_slider">
+        <ul class="slider">
+            <li><img src="./mirror1.jpg" alt=""></li>
+            <li><img src="./mirror2.jpg" alt=""></li>
+            <li><img src="./mirror3.jpg" alt=""></li>
+        </ul>
+      </div>
+      <div class="arrow">
+          <a href="" class="prev">이전</a>
+          <a href="" class="next">다음</a>
       </div>
     </div>
-    
-    <button id="prev" type="button">◀</button>
-    <button id="next" type="button">▶</button>
-
     <script src="./slide.js"></script>
   </body>
 </html>

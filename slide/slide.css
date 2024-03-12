@@ -1,50 +1,38 @@
 * {
-  box-sizing: border-box;
+  margin:0; 
+  padding:0;
 }
-
-.carousel-wrapper {
-  width: 500px;
-  height: 500px;
+li {
+  list-style: none;
+}
+.kind_wrap {  
+  width:100%;
+  max-width:500px;  
+  margin:0 auto; 
+  position: relative;
+}
+.kind_wrap > .kind_slider {
   overflow: hidden;
-  position:absolute;
-  top:15%;
-  right:35%;
 }
-
-.carousel-wrapper > .carousel {
-    display: flex;
-    transform: translate3d(0, 0, 0);
-    transition: transform 0.2s;
-  
-
-  }
-
-.carousel-wrapper > .carousel > img {
-  width: 500px;
-  height: 500px;
-  }
-
-
-#prev{
-  position: absolute;
-  top:45%;
-  left:35%;
-  background-color: none;
-  width: 50px;
-  height: 50px;
-  font-size:30px;
-  font-weight: bold;
-  text-align: center;
+.kind_wrap > .kind_slider .slider { 
+  position: relative; 
+  transition: 0.7s; 
+} 
+.kind_wrap > .kind_slider .slider li {
+  float:left;
+  width:100%;
+  object-fit: contain;
 }
-
-#next{
-  position: absolute;
-  top:45%;
-  right:35%;
-  background-color: none;
-  width: 50px;
-  height: 50px;
-  font-size:30px;
-  font-weight: bold;
-  text-align: center;
+.kind_wrap > .kind_slider img {
+  vertical-align: top;
+}
+.kind_wrap .arrow > a.prev {
+  position: absolute; 
+  left:-50px; 
+  top:100px;
+}
+.kind_wrap .arrow > a.next {
+  position: absolute; 
+  right:-50px; 
+  top:100px;
 }
