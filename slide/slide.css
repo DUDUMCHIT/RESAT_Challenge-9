@@ -15,17 +15,21 @@ li {
   overflow: hidden;
 }
 .kind_wrap > .kind_slider .slider { 
-  position: relative; 
+  position: flex; 
   transition: 0.7s; 
 } 
 .kind_wrap > .kind_slider .slider li {
   float:left;
-  width:100%;
-  object-fit: contain;
+ 
 }
-.kind_wrap > .kind_slider img {
+.kind_wrap > .kind_slider li img {
   vertical-align: top;
+  width:100%;
+  height: auto;
+  object-fit: cover;
 }
+  
+  
 .kind_wrap .arrow > a.prev {
   position: absolute; 
   left:-50px; 
