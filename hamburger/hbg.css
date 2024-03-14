@@ -1,0 +1,95 @@
+
+
+nav{
+    background-color: #dbebf4;
+    height:50px;
+    
+}
+ul li{
+    display: inline-block; /*블럭 나눠서 가로로 정렬해주기*/
+    position: inherit;
+    margin-top: 0.7%;
+    
+}
+
+.menu{
+    text-decoration-line: none ; /*하이퍼 밑줄 제거*/
+    color:#333;
+    font-weight: bold;
+}
+
+
+.hamburger{
+    position:absolute;
+    right:3%;
+    top:4%;
+    display:block;
+    width:30px;
+    height:20px;
+    cursor:pointer;
+    display: none;
+  }
+  /*햄버거표시*/
+  .hamburger span,
+  .hamburger span:before,
+  .hamburger span:after{
+    display:block;
+    position:absolute;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#2d2d2d;
+    transition:all 0.3s;
+   
+  }
+  .hamburger span{
+    top:50%;
+    transform:translteY(-50%,-50%);
+  }
+  .hamburger span:before,
+  .hamburger span:after{
+    content:'';
+  }
+  .hamburger span:before{
+    top:-15px;
+  }
+  .hamburger span:after{
+    top:15px;
+  }
+  /*hover*/
+  .hamburger:hover>span{
+    background:transparent;
+  }
+  .hamburger:hover>span:before{
+    top:0;
+    transform:rotate(45deg);
+  }
+  .hamburger:hover>span:after{
+    top:0;
+    transform:rotate(-45deg);
+  }
+
+/*핸드폰화면,그리고 최대 화면이 저럴경우..*/
+@media screen and (max-width:768px)  {
+    .navi{
+        flex-direction: column;
+       
+    }
+
+    .navbar-menu{
+        /*flex-direction: column;
+        align-items: center;
+        width: 100%;*/
+        display: none;
+
+    }
+
+    .menu{
+        width:100%;
+        text-align: center;
+    }
+
+    .hamburger{
+        display: block;
+    }
+}
