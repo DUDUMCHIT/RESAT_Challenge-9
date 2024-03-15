@@ -1,0 +1,52 @@
+.whole {
+    width:300px;
+    height: 400px;
+    display: flex; /*부모요소만 쓴다고 함*/
+    justify-content: center;/* 가로중앙정렬*/
+    align-items: center; /* 세로중앙정렬*/
+    flex-direction: column;
+    border: 1px solid #003366;
+    border-radius: 6px;
+    position: absolute; /*화면을 축소해도 중앙에 있었으면 좋겠는데....*/
+    margin-top: 5%;
+    right:43%;
+
+}
+
+h1{
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.account{
+    margin-bottom: 5px;
+    padding: 2px;
+    border: 1px solid lightgray;
+    border-radius:3px;
+    background-color: white;
+    display:block;
+    height: 30px;
+    width: 80%;
+
+}
+
+#login{
+    width: 82%;
+    background-color: lightblue;
+    border-color: transparent;
+    color: #003366;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#login:hover{
+    background-color: rgb(132, 195, 216);
+    cursor:pointer; /*클릭시 손모양으로 바꾸기*/
+}
+
+
+#alert{
+    border-color: transparent;
+}
+
